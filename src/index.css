@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #A78BFA;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-mono text-label uppercase tracking-widest text-muted;
+  }
+
+  .divider {
+    @apply w-full border-t border-ink/10;
+  }
+
+  .tag {
+    @apply inline-block font-mono text-[0.65rem] uppercase tracking-widest px-2 py-1 border border-ink/20 text-muted;
+  }
+
+  .tag-accent {
+    @apply inline-block font-mono text-[0.65rem] uppercase tracking-widest px-2 py-1 border border-accent/50 text-accent;
+  }
+
+  .btn-link {
+    @apply inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-ink border-b border-ink pb-0.5 transition-all duration-300 hover:text-accent hover:border-accent;
+  }
+
+  .nav-link {
+    @apply text-sm font-mono uppercase tracking-widest text-muted transition-colors duration-200 hover:text-ink;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Cursor line blink for hero */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1.2s ease-in-out infinite;
+}

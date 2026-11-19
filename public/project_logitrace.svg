@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F8F8F8"/>
+  <!-- Workflow nodes -->
+  <rect x="80" y="260" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <rect x="240" y="180" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <rect x="240" y="340" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <rect x="420" y="220" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <rect x="420" y="310" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <rect x="600" y="260" width="100" height="40" rx="3" stroke="#111" stroke-width="1.2" fill="none"/>
+  <!-- Connectors -->
+  <line x1="180" y1="280" x2="240" y2="200" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="180" y1="280" x2="240" y2="360" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="340" y1="200" x2="420" y2="240" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="340" y1="360" x2="420" y2="330" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="520" y1="240" x2="600" y2="275" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="520" y1="330" x2="600" y2="285" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- Timeline bar -->
+  <rect x="80" y="460" width="640" height="6" rx="3" fill="#E0E0E0"/>
+  <rect x="80" y="460" width="260" height="6" rx="3" fill="#111"/>
+  <!-- Timeline markers -->
+  <line x1="80" y1="455" x2="80" y2="475" stroke="#111" stroke-width="1.2"/>
+  <line x1="210" y1="455" x2="210" y2="475" stroke="#111" stroke-width="1.2"/>
+  <line x1="340" y1="455" x2="340" y2="475" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="470" y1="455" x2="470" y2="475" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="600" y1="455" x2="600" y2="475" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="720" y1="455" x2="720" y2="475" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+  <!-- Status dots -->
+  <circle cx="130" cy="100" r="5" fill="#111"/>
+  <circle cx="260" cy="100" r="5" fill="#111"/>
+  <circle cx="390" cy="100" r="5" fill="#888"/>
+  <circle cx="520" cy="100" r="5" fill="#888"/>
+  <circle cx="650" cy="100" r="5" fill="#E0E0E0" stroke="#888" stroke-width="1"/>
+  <line x1="135" y1="100" x2="255" y2="100" stroke="#111" stroke-width="1.2"/>
+  <line x1="265" y1="100" x2="385" y2="100" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="395" y1="100" x2="515" y2="100" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="525" y1="100" x2="645" y2="100" stroke="#CCC" stroke-width="1" stroke-dasharray="4 3"/>
+</svg>

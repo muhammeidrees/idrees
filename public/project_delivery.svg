@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F8F8F8"/>
+  <!-- Grid lines -->
+  <line x1="80" y1="500" x2="720" y2="500" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="80" y1="420" x2="720" y2="420" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="80" y1="340" x2="720" y2="340" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="80" y1="260" x2="720" y2="260" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="80" y1="180" x2="720" y2="180" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="80" y1="100" x2="720" y2="100" stroke="#E0E0E0" stroke-width="1"/>
+  <!-- Data scatter points — on-time -->
+  <circle cx="140" cy="460" r="3" fill="#222"/>
+  <circle cx="180" cy="430" r="3" fill="#222"/>
+  <circle cx="230" cy="450" r="3" fill="#222"/>
+  <circle cx="270" cy="410" r="3" fill="#222"/>
+  <circle cx="310" cy="440" r="3" fill="#222"/>
+  <circle cx="360" cy="420" r="3" fill="#222"/>
+  <circle cx="400" cy="400" r="3" fill="#222"/>
+  <circle cx="450" cy="430" r="3" fill="#222"/>
+  <circle cx="490" cy="410" r="3" fill="#222"/>
+  <circle cx="530" cy="440" r="3" fill="#222"/>
+  <!-- Data scatter points — delayed -->
+  <circle cx="150" cy="200" r="3" fill="#888"/>
+  <circle cx="200" cy="240" r="3" fill="#888"/>
+  <circle cx="250" cy="180" r="3" fill="#888"/>
+  <circle cx="300" cy="210" r="3" fill="#888"/>
+  <circle cx="350" cy="190" r="3" fill="#888"/>
+  <circle cx="410" cy="230" r="3" fill="#888"/>
+  <circle cx="460" cy="200" r="3" fill="#888"/>
+  <circle cx="510" cy="220" r="3" fill="#888"/>
+  <circle cx="560" cy="195" r="3" fill="#888"/>
+  <circle cx="610" cy="210" r="3" fill="#888"/>
+  <!-- Decision boundary -->
+  <line x1="80" y1="320" x2="680" y2="320" stroke="#111" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Axes -->
+  <line x1="80" y1="80" x2="80" y2="520" stroke="#111" stroke-width="1.5"/>
+  <line x1="80" y1="520" x2="740" y2="520" stroke="#111" stroke-width="1.5"/>
+  <!-- Label areas -->
+  <rect x="600" y="150" width="90" height="20" rx="2" fill="none" stroke="#111" stroke-width="0.8"/>
+  <rect x="600" y="380" width="90" height="20" rx="2" fill="none" stroke="#888" stroke-width="0.8"/>
+  <!-- Prediction line -->
+  <polyline points="120,460 200,440 300,420 400,390 500,360 620,330" stroke="#111" stroke-width="1.5" fill="none"/>
+</svg>
