@@ -34,10 +34,10 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
           {/* Logo */}
           <a
-            href="#"
+            href="tel:+918129829294"
             className="font-mono text-xs uppercase tracking-[0.2em] text-ink font-semibold hover:text-accent transition-colors duration-200"
           >
-            Muhammed Idrees
+            Muhammed Idrees   &nbsp;&nbsp; +91 8129829294
           </a>
 
           {/* Desktop Nav */}

@@ -37,7 +37,7 @@ const contacts: ContactItem[] = [
     id: 'Phone',
     label: 'Phone',
     value: '+91 8129829294',
-    href: 'tell: +91 81298 29294',
+    href: 'tel: +91 81298 29294',
     icon: PhoneCallIcon,
   },
 ]
