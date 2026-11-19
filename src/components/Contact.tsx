@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Link, Mail, MapPin } from 'lucide-react'
+import { ExternalLink, Link, Mail, MapPin, Phone, PhoneCallIcon } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { fadeUp, EXPO } from '../utils/animations'
 
@@ -32,6 +32,13 @@ const contacts: ContactItem[] = [
     value: 'idreesmuhammed112@gmail.com',
     href: 'mailto:idreesmuhammed112@gmail.com',
     icon: Mail,
+  },
+  {
+    id: 'Phone',
+    label: 'Phone',
+    value: '+91 8129829294',
+    href: 'tell: +91 81298 29294',
+    icon: PhoneCallIcon,
   },
 ]
 

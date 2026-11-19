@@ -39,7 +39,7 @@ export const projects = [
     tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost'],
     status: 'Completed',
     image: '/project_delivery.svg',
-    link: 'https://github.com/muhammeidrees/delivery_delay_prediction-',
+    link: 'https://github.com/muhammeidrees/delivery_delay_prediction',
     note: 'EDA · Feature engineering · Classification · Regression · Model evaluation',
     category: 'Machine Learning / Predictive Analytics',
   },
