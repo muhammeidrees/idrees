@@ -37,7 +37,7 @@ const contacts: ContactItem[] = [
     id: 'Phone',
     label: 'Phone',
     value: '+91 8129829294',
-    href: 'tel: +91 81298 29294',
+    href: 'tel:+918129829294',
     icon: PhoneCallIcon,
   },
 ]
@@ -55,13 +55,13 @@ export function Contact() {
           Have something interesting to figure out?
         </motion.h2>
 
-        <motion.p {...fadeUp(0.15)} className="text-base text-muted leading-relaxed max-w-lg mb-14 md:mb-20">
+        <motion.p {...fadeUp(0.15)} className="text-base text-muted leading-relaxed max-w-lg mb-10 md:mb-20">
           I'm always interested in good questions, difficult problems,
           and ideas worth exploring.
         </motion.p>
 
         {/* Contact links */}
-        <div className="flex flex-col gap-0 max-w-xl mb-16 md:mb-24">
+        <div className="flex flex-col gap-0 max-w-xl mb-10 md:mb-24">
           {contacts.map((c, i) => (
             <motion.a
               key={c.id}
@@ -70,13 +70,13 @@ export function Contact() {
               target={c.id !== 'email' ? '_blank' : undefined}
               rel={c.id !== 'email' ? 'noopener noreferrer' : undefined}
               {...fadeUp(0.1 * i + 0.2)}
-              className="flex items-center gap-4 py-5 border-t border-ink/10 group last:border-b last:border-ink/10 hover:border-ink/30 transition-colors duration-300"
+              className="flex items-center gap-3 sm:gap-4 py-5 border-t border-ink/10 group last:border-b last:border-ink/10 hover:border-ink/30 transition-colors duration-300"
             >
               <c.icon size={14} className="text-muted group-hover:text-accent transition-colors shrink-0" />
-              <span className="font-mono text-xs text-muted uppercase tracking-widest w-20 shrink-0">
+              <span className="font-mono text-xs text-muted uppercase tracking-widest w-16 sm:w-20 shrink-0">
                 {c.label}
               </span>
-              <span className="text-sm text-ink group-hover:text-accent transition-colors duration-300">
+              <span className="text-sm text-ink group-hover:text-accent transition-colors duration-300 min-w-0 break-words">
                 {c.value}
               </span>
             </motion.a>
@@ -84,7 +84,7 @@ export function Contact() {
         </div>
 
         {/* Location */}
-        <motion.div {...fadeUp(0.5)} className="flex items-center gap-2 mb-20 md:mb-28">
+        <motion.div {...fadeUp(0.5)} className="flex items-center gap-2 mb-12 md:mb-28">
           <MapPin size={12} className="text-muted" />
           <span className="font-mono text-xs text-muted uppercase tracking-widest">Kerala, India</span>
         </motion.div>
