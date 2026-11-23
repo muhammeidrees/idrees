@@ -16,10 +16,10 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-between pt-16 overflow-hidden"
+      className="relative min-h-[100svh] flex flex-col justify-between pt-16 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-10 flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start pt-16 lg:pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start pt-8 md:pt-16 lg:pt-24">
 
           {/* Left — Text */}
           <motion.div variants={container} initial="hidden" animate="show" className="flex flex-col">
@@ -55,7 +55,7 @@ export function Hero() {
               variants={fadeUp}
               className="text-base text-muted max-w-lg mb-6 ml-1 md:ml-2 leading-relaxed"
             >
-              Some ideas begin with a question. Others begin with a problem.
+              Some ideas begin with a question. Others begin with a problem.{' '}
               <br className="hidden md:block" />
               I like finding out where they can lead.
             </motion.p>
@@ -65,17 +65,17 @@ export function Hero() {
               variants={fadeUp}
               className="text-sm text-muted max-w-md ml-1 md:ml-2 font-mono"
             >
-              Exploring technology, understanding problems,
-              <br />
+              Exploring technology, understanding problems,{' '}
+              <br className="hidden md:block" />
               and building things worth using.
             </motion.p>
 
             {/* Role */}
-            <motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center gap-3">
+            <motion.div variants={fadeUp} className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-3">
               <span className="section-label">Independent Engineer</span>
-              <span className="text-muted/40 text-xs">|</span>
+              <span className="hidden sm:inline text-muted/40 text-xs">|</span>
               <span className="section-label">Applied AI</span>
-              <span className="text-muted/40 text-xs">|</span>
+              <span className="hidden sm:inline text-muted/40 text-xs">|</span>
               <span className="section-label">Research & Technology</span>
             </motion.div>
           </motion.div>
