@@ -106,7 +106,7 @@ export function BusinessWork() {
                   <motion.div
                     key={site.title}
                     {...fadeUp(0.1 * i + 0.2)}
-                    className="border-t border-ink/10 py-6 flex items-center justify-between group last:border-b last:border-ink/10"
+                    className="border-t border-ink/10 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 group last:border-b last:border-ink/10"
                   >
                     <div>
                       <p className="text-sm font-bold text-ink mb-1">{site.title}</p>
@@ -117,7 +117,7 @@ export function BusinessWork() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Visit ${site.title}`}
-                      className="flex items-center gap-1.5 font-mono text-xs text-muted hover:text-ink transition-colors duration-200 ml-6 shrink-0"
+                      className="flex items-center gap-1.5 font-mono text-xs text-muted hover:text-ink transition-colors duration-200 sm:ml-6 shrink-0 self-start sm:self-auto"
                     >
                       {site.url.replace('https://', '')}
                       <ArrowUpRight size={12} className="group-hover:text-accent transition-colors" />
