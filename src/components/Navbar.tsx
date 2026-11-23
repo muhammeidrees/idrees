@@ -2,6 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { useNavScroll } from '../hooks/useScrollAnimation'
 import { EXPO } from '../utils/animations'
+import { Phone } from 'lucide-react'
+
+const PHONE_HREF = 'tel:+918129829294'
+const PHONE_LABEL = '+91 81298 29294'
 
 const navLinks = [
   { label: 'Selected Work', href: '#work' },
@@ -21,6 +25,12 @@ export function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Stop the page behind the mobile menu from scrolling
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   return (
     <>
       <motion.header
@@ -31,14 +41,22 @@ export function Navbar() {
           scrolled ? 'border-b border-ink/10 bg-bg/95 backdrop-blur-sm' : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
-          {/* Logo */}
-          <a
-            href="tel:+918129829294"
-            className="font-mono text-xs uppercase tracking-[0.2em] text-ink font-semibold hover:text-accent transition-colors duration-200"
-          >
-            Muhammed Idrees   &nbsp;&nbsp; +91 8129829294
-          </a>
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between gap-4 h-16">
+          {/* Logo: name reloads the site, number starts a call */}
+          <div className="flex items-center gap-6 min-w-0">
+            <a
+              href="/"
+              className="font-mono text-xs uppercase tracking-[0.2em] text-ink font-semibold whitespace-nowrap hover:text-accent transition-colors duration-200"
+            >
+              Muhammed Idrees
+            </a>
+            <a
+              href={PHONE_HREF}
+              className="hidden md:inline font-mono text-xs tracking-[0.15em] text-muted whitespace-nowrap hover:text-accent transition-colors duration-200"
+            >
+              {PHONE_LABEL}
+            </a>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -49,17 +67,27 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile menu toggle */}
-          <button
-            id="mobile-menu-btn"
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-1"
-          >
-            <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-          </button>
+          {/* Mobile: call button + menu toggle */}
+          <div className="md:hidden flex items-center gap-1 -mr-2">
+            <a
+              href={PHONE_HREF}
+              aria-label={`Call ${PHONE_LABEL}`}
+              className="w-11 h-11 flex items-center justify-center text-ink hover:text-accent transition-colors"
+            >
+              <Phone size={16} strokeWidth={1.75} />
+            </a>
+            <button
+              id="mobile-menu-btn"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="w-11 h-11 flex flex-col items-center justify-center gap-1.5"
+            >
+              <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+              <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-px bg-ink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+            </button>
+          </div>
         </div>
       </motion.header>
 
@@ -88,6 +116,16 @@ export function Navbar() {
                 </motion.a>
               ))}
             </div>
+            <motion.a
+              href={PHONE_HREF}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: navLinks.length * 0.08 }}
+              className="border-t border-ink/10 pt-6 flex items-center gap-3 font-mono text-sm tracking-widest text-muted hover:text-ink transition-colors"
+            >
+              <Phone size={14} strokeWidth={1.75} />
+              {PHONE_LABEL}
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
