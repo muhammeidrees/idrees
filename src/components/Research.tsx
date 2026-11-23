@@ -8,7 +8,7 @@ export function Research() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-section">
 
         {/* Header row */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-20 mb-16 md:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-20 mb-10 md:mb-24">
           <div>
             <motion.span {...fadeUp(0)} className="section-label block mb-4">
               Research
@@ -30,7 +30,7 @@ export function Research() {
         {/* Research visual */}
         <motion.div
           {...fadeUp(0.1)}
-          className="mb-16 md:mb-24 overflow-hidden border border-ink/10 max-w-2xl"
+          className="mb-10 md:mb-24 overflow-hidden border border-ink/10 max-w-2xl"
         >
           <img
             src="/research_visual.png"
@@ -40,12 +40,12 @@ export function Research() {
         </motion.div>
 
         {/* Topics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ink/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ink/10 border-y border-ink/10 sm:border-0">
           {researchTopics.map((topic, i) => (
             <motion.div
               key={topic.id}
               {...fadeUp(0.1 * i + 0.2)}
-              className="bg-bg p-8 md:p-10 flex flex-col gap-5"
+              className="bg-bg py-7 px-0 sm:p-8 md:p-10 flex flex-col gap-4 sm:gap-5"
             >
               {/* Formula badge */}
               <div className="flex items-center gap-3">
