@@ -9,7 +9,7 @@ export function SelectedWork() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-section">
 
         {/* Section header */}
-        <div className="flex items-end justify-between mb-14 md:mb-20">
+        <div className="flex items-end justify-between mb-10 md:mb-20">
           <div>
             <motion.span {...fadeUp(0)} className="section-label block mb-4">
               Selected work
