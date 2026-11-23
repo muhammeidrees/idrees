@@ -26,7 +26,7 @@ export default {
         'label': ['0.7rem', { lineHeight: '1', letterSpacing: '0.12em', fontWeight: '600' }],
       },
       spacing: {
-        'section': 'clamp(5rem, 10vw, 9rem)',
+        'section': 'clamp(4rem, 10vw, 9rem)',
       },
       transitionTimingFunction: {
         'expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
